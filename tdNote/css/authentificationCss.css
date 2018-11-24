@@ -18,44 +18,43 @@ div#signIN{
 }  */
 
 form {
-    width:40%;
-    padding: 30px;
-    border: 1px solid #f1f1f1;
-    background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    margin: auto;
+  width: 40%;
+  padding: 30px;
+  border: 1px solid #f1f1f1;
+  background: #fff;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  margin: auto;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
-input{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid rgba(204, 204, 204, 0.39); 
-    box-sizing: border-box;
-
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgba(204, 204, 204, 0.39);
+  box-sizing: border-box;
 }
-select{
-    display: inline-block;
+select {
+  display: inline-block;
 }
 
-input[type=submit] {
-    width: 20%;
-    float: right;
-    margin: auto;
+input[type="submit"] {
+  width: 20%;
+  float: right;
+  margin: auto;
 }
 
 /* [type=text],input[type=password],input[type=email] */
 .error {
-    color: red;
-    font-size: 1.1em;
-    text-align: center;
-    margin-bottom: 50px;
-  }
+  color: red;
+  font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 50px;
+}

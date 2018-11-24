@@ -1,10 +1,12 @@
 <?php
 
-function hasAuthenticationError() {
+function hasAuthenticationError()
+{
   return isset($_GET["authError"]);
 }
 
-function getAuthenticationError() {
+function getAuthenticationError()
+{
   return $_GET["authError"];
 }
 

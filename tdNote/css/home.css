@@ -1,11 +1,13 @@
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover{
-    background-color:#8c7d7d;
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+  background-color: #8c7d7d;
 }
 
-.navbar-nav>li.miage{
-    float: right;
+.navbar-nav > li.miage {
+  float: right;
 }
 
-div.allArticle{
-    background-color: #8c7d7d;
+div.allArticle {
+  background-color: #8c7d7d;
 }

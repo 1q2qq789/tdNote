@@ -1,6 +1,6 @@
 <?php
-include_once(__DIR__."/./utils/authentificationUtils.php");
-include_once(__DIR__."/./utils/userUtils.php");
+include_once(__DIR__ . "/./utils/authentificationUtils.php");
+include_once(__DIR__ . "/./utils/userUtils.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,9 +15,9 @@ include_once(__DIR__."/./utils/userUtils.php");
 </head>
 <body>
 <?php
-    if(isLoggedIn()) {
-        header("location:home.php");
-    }else{
+if (isLoggedIn()) {
+    header("location:home.php");
+} else {
     ?>
     
     <div class="p-3 mb-2 bg-info text-white" name='blog'>
@@ -25,11 +25,11 @@ include_once(__DIR__."/./utils/userUtils.php");
     <div class="p-3 mb-2 bg-light text-dark" name='signIn'>
     <h2 class="text-primary">Sign in</h2>
     <?php
-        if(hasAuthenticationError()) {
-          $err = getAuthenticationError();
-          echo "<p class='error' > $err </p>";
-        }
-        ?>
+    if (hasAuthenticationError()) {
+        $err = getAuthenticationError();
+        echo "<p class='error' > $err </p>";
+    }
+    ?>
     <form method='post' action='scripts/authentification.php'>
     <input type='text' name='username' placeholder='username' required/>
     <input type='password' name='password'placeholder='password' required/>
@@ -39,7 +39,10 @@ include_once(__DIR__."/./utils/userUtils.php");
     </div>
     </div>
     <?php
-    }
+
+}
 ?>
+
+
 </body>
 </html>

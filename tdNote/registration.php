@@ -1,5 +1,5 @@
 <?php
-include_once(__DIR__."/./utils/authentificationUtils.php");
+include_once(__DIR__ . "/./utils/authentificationUtils.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,11 +19,11 @@ include_once(__DIR__."/./utils/authentificationUtils.php");
     <div class="p-3 mb-2 bg-light text-dark" class='registration'>
     <h2 class="text-primary">Registration</h2>
     <?php
-        if(hasAuthenticationError()) {
-          $err = getAuthenticationError();
-          echo "<p class='error' > $err </p>";
-        }
-        ?>
+    if (hasAuthenticationError()) {
+        $err = getAuthenticationError();
+        echo "<p class='error'> $err</p>";
+    }
+    ?>
     <form method='post' action='./scripts/registrationInsert.php'>
     <input type='text' name='firstname' placeholder='firstname' required/>
     <input type='password' name='lastname'placeholder='lastname' required/>

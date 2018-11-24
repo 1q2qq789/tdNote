@@ -14,19 +14,16 @@ session_start();
 </head>
 <nav class="navbar navbar-inverse" role="navigation">
 	<div class="container-fluid">
-    <!-- <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-          <h3>The Miage Blog</h3></a>
-    </div> -->
+    
     <div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="home.php">
+            <li class="active"><a href="../home.php">
               <img src="images/home3.svg" width="30" height="30" alt="">
                home</a></li>
-            <li><a href="articles.php">
+            <li><a href="../articles.php">
             <img src="images/post.svg" width="30" height="30" alt="">
               New Post</a></li>
-            <li><a href="scripts/logout.php">
+            <li><a href="../scripts/logout.php">
             <img src="images/logout.png" width="30" height="30" alt="">
               Logout</a></li>
               <li><a href="../profilArticle.php">

@@ -1,7 +1,7 @@
 <?php
 session_start();
-include_once(__DIR__."/./utils/articleUtils.php");
-include_once(__DIR__."/./utils/userUtils.php");
+include_once(__DIR__ . "/./utils/articleUtils.php");
+include_once(__DIR__ . "/./utils/userUtils.php");
 include('./views/menu.inc.php');
 ?>
 
@@ -17,24 +17,34 @@ include('./views/menu.inc.php');
     
 </head>
 <body>
-<article>
+<div class='pagehome'>
 <?php
-    if(!isLoggedIn()) {
-        header("location:index.php");
-    }
-        if(hasArticle()) {
-          $article = getArticle();
-          echo "<p class='message'> $article </p>";
-        }else{
-        $ar=getAllArticles();
-        foreach($ar as $key=>$arti){
-            echo $arti['title'];
-            echo '<hr>';
-            echo $arti['content'].'<br>';
-            echo $arti['date'].'<br>';
+if (!isLoggedIn()) {
+    header("location:index.php");
+}
+if (hasArticle()) {
+    $article = getArticle();
+    echo '<div class="alert alert-success" role="alert">';
+    echo "<p class='message'> $article </p>";
+} else {
+    $username = $_SESSION['user'];
+    $ar = getAllArticles();
+    foreach ($ar as $key => $arti) {
+        echo '<article>';
+        echo "<h4>".$arti['title']."</h4>";
+            //var_dump($arti);
+        if ($arti['username'] == $username) {
+            
+            echo "<div><a class='delete' href=./scripts/clearArticles.php?id=" . $arti['id'] . "><img src='images/delete.png' width='30' height='30' alt=''>DELETE" . "</a></div>";
         }
+        echo '<hr>';
+        echo $arti['content'] . '<br>';
+        echo $arti['date'] . '<br>';
+        echo "<a href=scripts/articleFrom.php?id=" . $arti['username'] . ">@" . $arti['username'] . "</a><br>";
+        echo '</article>';
     }
-    ?>
-</article>
+}
+?>
+</div>
 </body>
 </html>

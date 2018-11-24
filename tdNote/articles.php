@@ -3,7 +3,7 @@ session_start();
 include_once("./utils/userUtils.php");
 include_once("./utils/articleUtils.php");
 
-if(!isLoggedIn()) {
+if (!isLoggedIn()) {
   header("location: ./index.php");
   exit();
 }
@@ -20,17 +20,17 @@ if(!isLoggedIn()) {
 <form method='POST' id='createArticle' action='./scripts/createArticle.php'>
         <h1>Create a new Post</h1>
         <?php
-        if(hasArticleError()) {
+        if (hasArticleError()) {
           $err = getArticleError();
           echo "<p class='error' > $err </p>";
         }
         ?>
         <input type="text" name='title' placeholder='Article Title' />
         <textarea rows='10' name='content'></textarea>
-        <input name='add_article' type='submit' value='Create Article'/>
+        <input name='add_article' type='submit' value='CREATE'/>
       </form>
-      <form method='POST' id='createArticle' action='./scripts/clearArticles.php'>
-      <input name='clear_articles' class='important' type='submit' value='Clear Articles'/>
+      <form method='POST' id='createArticle' action='../home.php'>
+      <input name='clear_articles' class='important' type='submit' value='CANCEL'/>
       </form>
       <div>
 </body>

@@ -1,8 +1,9 @@
 <?php
-$DB = NULL;
-function connect() {
+$DB = null;
+function connect()
+{
     global $DB;
-    if ($DB== NULL) {
+    if ($DB == null) {
         $dbType = "mysql";
         $host = "localhost";
         $port = 3306;
@@ -10,15 +11,16 @@ function connect() {
         $user = "root";
         $password = "";
         try {
-            $DB = new PDO("$dbType:host=$host;port=$port;dbname=$dbname",$user,$password);    
-        } catch(Exception $e) {
-            die('Erreur:'.$e->getMessage());    
+            $DB = new PDO("$dbType:host=$host;port=$port;dbname=$dbname", $user, $password);
+        } catch (Exception $e) {
+            die('Erreur:' . $e->getMessage());
         }
     }
     return $DB;
 }
 
-function execute ($request, $data=null) { //= NULL car peut être égal à NULL
+function execute($request, $data = null)
+{ //= NULL car peut être égal à NULL
     $request->execute($data);
     if ($request->errorInfo()[2]) {
         throw new Exception($request->errorInfo()[2]);
